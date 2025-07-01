@@ -1,0 +1,153 @@
+*{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Press Start 2P", system-ui;
+    font-size: 1.2rem;
+}
+
+
+.opcoesMenu{
+    margin-top: 4vh;
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.opcoesMenu legend{
+    font-size: 1.9vw;
+    color:#F0F8FF ;
+}
+
+
+.opcaoMenu{
+    margin: 2%;
+    font-size: 2.5vw;
+    border-radius: 2rem;
+    background-color: #555555;
+    padding: 4%;
+}
+
+
+
+.Dificuldades{
+    display: flex;
+    width: 12vw;
+    height: 70vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.Dificuldades .opcao{
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    height: 30%;
+    width: 70%;
+    padding: 1rem;
+    margin: 1rem;
+    color:rgb(255, 255, 255) ;
+    font-size: 1rem;
+}
+.Temas{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80vw;
+    height: 70vh;
+    justify-content: space-between;
+    align-items: start;
+}
+.Temas .opcao{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    height: 45%;
+    width: 25%;
+    padding: 2rem;
+    margin: 1rem;
+    font-size: 1.3rem;
+}
+input[type="radio"]{ 
+    appearance: none;
+}
+
+
+#btn__iniciar{
+    background-color: rgb(8, 0, 255);
+    color: white;
+    font-size: 150%;
+    border-radius: 20%;
+    margin-top: 1%;
+    padding: 2%;
+    transition: all 0.3s;
+}
+
+.opcao{
+    cursor: pointer;
+    transition: 0.25s;
+    border: 5px solid black ;
+}
+.opcao img{
+    height: 120px;
+    width:  120px;
+}
+
+/* Classes Diferenciadas */
+/* Opções de dificuldade*/
+.Dificuldades label:nth-of-type(1){
+    background-color: rgb(0, 144, 0);
+    font-weight: 200;
+}
+
+.Dificuldades label:nth-of-type(2){
+    background-color: rgb(128, 154, 0);
+    font-weight: 600;
+}
+
+.Dificuldades label:nth-of-type(3){
+    background-color: rgb(150, 0, 0);
+    font-weight: 1000;
+}
+
+/* opções temas */
+.Temas label:nth-of-type(1){
+    background-color: #FFEB3B;
+}
+.Temas label:nth-of-type(2){
+    background-color: #2196F3;
+}
+.Temas label:nth-of-type(3){
+    background-color: #FF9800;
+}
+.Temas label:nth-of-type(4){
+    background-color: #4CAF50;
+}
+.Temas label:nth-of-type(5){
+    background-color: #F44336;
+}
+.Temas label:nth-of-type(6){
+    background-color: #FF6F61;
+}
+
+/* Opções de  Temas*/
+.Temas .opcao:has(input:checked){
+    filter: brightness(1.3);
+    transform: scale(1.2);
+    color: black;
+}
+
+.Dificuldades .opcao:has(input:checked){
+    filter: brightness(2);
+    transform: scale(1.2);
+    color: black;
+}
+

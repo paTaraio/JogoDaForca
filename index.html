@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Quiz Estilo Forca</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <link rel='stylesheet' href='./src/styles/style.css'>
+    <link rel='stylesheet' href='./src/styles/dialog.css'>
+    <link rel='stylesheet' href='./src/styles/menu.css'>
+</head>
+<body>
+    <header>
+            <h1>Quiz Estilo Forca</h1>
+            <h3 id="vitorias">Vitorias:</h3>
+    </header>
+
+    <dialog>    
+        <h1 id="dialog-resultado">Resultado</h1>
+        <img class="forcaImg" id="forcaImgDialog" src="">
+        <h5 id="dialog-palavra-correta">Palavra correta: </h5>
+        <button onclick="window.location.reload()">Menu</button>
+        <button onclick="ResetarJogo()">Reset</button>
+    </dialog>
+
+    <main>
+        <div class="menu">
+            <div class="opcoesMenu">
+                <fieldset class="Dificuldades opcaoMenu">
+                    <legend>Dificuldade</legend> 
+                    <label class="opcao" for="DificuldadeFacil">
+                        Facil
+                        <input name="Dificuldade" id="DificuldadeFacil" type="radio" value="0">
+                    </label><br>
+
+                    <label class="opcao"for="DificuldadeMedio">
+                        Medio
+                        <input name="Dificuldade" id="DificuldadeMedio" type="radio" value="1" checked>
+                    </label><br>
+
+                    <label class="opcao" for="DificuldadeDificil">Dificil
+                        <input name="Dificuldade" id="DificuldadeDificil" type="radio" value="2">
+                    </label>
+                </fieldset>
+
+                <fieldset class="Temas opcaoMenu">
+                    <legend>Temas</legend>
+
+                    <label class="opcao" for="TemaAnimal">
+                        <img src="./src/imagens/Menu/MenuAnimais.png" alt="">
+                        Animais
+                        <input name="Tema" id="TemaAnimal" type="radio" value="0" checked>
+                    </label><br>
+
+                    <label class="opcao" for="TemaHerois">
+                        <img src="./src/imagens/Menu/MenuHerois.png" alt="Animal">
+                        Herois
+                        <input name="Tema" id="TemaHerois" type="radio" value="1">
+                    </label><br>
+
+                    <label class="opcao" for="TemaViloes">
+                        <img src="./src/imagens/Menu/MenuViloes.png" alt="Animal">
+                            Vilões
+                        <input name="Tema" id="TemaViloes" type="radio" value="2">
+                    </label><br>
+
+                    <label class="opcao" for="TemaComidas">
+                        <img src="./src/imagens/Menu/MenuComidas.png" alt="Animal">
+                        Comidas
+                        <input name="Tema" id="TemaComidas" type="radio" value="3">
+                    </label><br>
+
+                    <label class="opcao" for="TemaJogos">
+                        <img src="./src/imagens/Menu/MenuJogos.png" alt="">
+                        Jogos
+                        <input name="Tema" id="TemaJogos" type="radio" value="4">
+                    </label><br>
+
+                    <label class="opcao" for="TemaFilmes">
+                        <img src="./src/imagens/Menu/MenuFilmes.png" alt="Filmes">
+                        Filmes
+                        <input name="Tema" id="TemaFilmes" type="radio" value="5">
+                    </label><br>
+
+                </fieldset>
+            </div>
+        
+                <button id="btn__iniciar" onclick="IniciarPartida();">Iniciar</button>
+        </div>
+
+        <div class="Jogo" style="display: none;">
+            <section>
+                <img class="forcaImg" id="forcaImgJogo" src="/JogoDaForca/src/imagens/Forca/forca6.jpeg">
+            </section>
+            <section>
+                <h2 id="DicaNaTela">Dica:</h2>
+                <h1 id="PalavraNaTela"></h1>
+            </section>
+            
+            <section id="AlfabetoJogo">
+            </section>
+            <section>
+                <input id="LetraEscolhida" type="text" maxlength="1" oninput="verificarLetra()" style="display: block;">
+            </section>  
+
+        </div>
+
+
+    </main>
+
+
+    <script defer src='./src/scripts/palavras.js'></script>
+    <script defer src='./src/scripts/script.js'></script>
+</body>
+</html>
